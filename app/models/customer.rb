@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  has_many :address, dependent: :destroy
+  has_one :address, dependent: :destroy
   accepts_nested_attributes_for :address
   has_many :transactions, dependent: :destroy
 
